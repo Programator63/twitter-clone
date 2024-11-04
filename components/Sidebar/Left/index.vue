@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import {HomeIcon} from "@heroicons/vue/20/solid"
 import useTailwindConfig from "~/composables/UseTailwindConfig";
 
 const {defaultTransition} = useTailwindConfig()
@@ -16,8 +16,15 @@ const {defaultTransition} = useTailwindConfig()
       </NuxtLink>
     </div>
 
+    <SidebarLeftTab>
+      <template v-slot:icon>
+        <HomeIcon/>
+      </template>
+      <template v-slot:name>
+        Home
+      </template>
+    </SidebarLeftTab>
 
-    left
   </div>
 </template>
 
